@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block livros %}
+<table class="table" style="text-align: center; background-color: #FFFFFF;">
+  <thead>
+    <tr style="background-color: #9B9B9B ">
+      <th scope="col">Título</th>
+      <th scope="col">Autor</th>
+      <th scope="col">Categoria</th>
+      <th scope="col">Editora</th>
+      <th scope="col">Data de leitura</th>
+      <th scope="col">Status</th>
+      <th scope="col">Tipo</th>
+      <th scope="col">Detalhe</th>
+    </tr>
+  </thead>
+  <tbody>
+   {% for curso in cursos %}
+    <tr>
+      <td>{{ curso.titulo }}</td>
+      <td>{{ curso.autor }}</td>
+      <td>{{ curso.categoria }}</td>
+      <td>{{ curso.editora }}</td>
+      <td>{{ curso.d_inicio }}</td>
+
+      {% if curso.status == True %}
+      <td style="color: green;">Concluído</td>
+      {% endif %}
+
+      {% if curso.status == False %}
+      <td style="color: red;">Encerrado</td>
+
+      {% endif %}
+      <td>{{ curso.tipo_obra }}</td>
+      <td>
+        <a class="link-detalhes" href="{% url 'detalhe_livro' curso.id %}"><i class="fas fa-info-circle"></i>Detalhes</a>
+      </td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+<button class="btn btn-dark"><a href="{% url 'cadastro' %}">Cadastrar</a></button>
+{% endblock%}

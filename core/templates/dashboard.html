@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% block dashboard %}
+
+<div class="container">
+    <h3 class="text-rigth" style="color: black; padding: 0px 0px 30px ">Dashboard</h3>
+  <div class="row">
+    <div class="col-md-3">
+    <div class="card text-black mb-3">
+      <div class="card-body">
+        <h5 class="card-title text-center">Livros</h5>
+        <h3 style="font-size: 40px; text-align: center">80</h3>
+      </div>
+    </div>
+   </div>
+    <div class="col-md-3">
+        <div class="card text-black mb-3">
+          <div class="card-body">
+            <h5 class="card-title text-center">Usuários</h5>
+            <h3 style="font-size: 40px; text-align: center">15</h3>
+          </div>
+        </div>
+       </div>
+    <div class="col-md-3">
+        <div class="card text-black mb-3">
+          <div class="card-body">
+            <h5 class="card-title text-center">Lidos</h5>
+            <h3 style="font-size: 40px; text-align: center">08</h3>
+          </div>
+        </div>
+       </div>
+      <div class="col-md-3">
+        <div class="card text-black mb-3">
+          <div class="card-body">
+            <h5 class="card-title text-center">Encerrados</h5>
+            <h3 style="font-size: 40px; text-align: center">05</h3>
+          </div>
+        </div>
+       </div>
+       <div class="col-md-12">
+        <div  class="card text-black mb-3">
+          <div style="height: 400px" class="card-body">
+            <h5 class="card-title text-center">Gráfico</h5>
+              <canvas id="myChart" width="400" height="130"></canvas>
+          </div>
+        </div>
+       </div>
+      <div class="col-md-6">
+        <div class="card text-black mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Tarefas</h5>
+            <a class="card-text">View Details</a>
+              <table class="table">
+          <tbody>
+            <tr>
+              <td>Diego Sousa Santos</td>
+            </tr>
+            <tr>
+              <td>José Sousa Barbosa</td>
+            </tr>
+            <tr>
+              <td>Carlos Misto Queste</td>
+            </tr>
+          </tbody>
+        </table>
+          </div>
+        </div>
+       </div>
+      <div class="col-md-6">
+        <div class="card text-black mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Detalhes</h5>
+            <a class="card-text text-center">View All</a>
+              <table class="table">
+          <tbody>
+            <tr>
+              <td>Diego Sousa Santos</td>
+            </tr>
+            <tr>
+              <td>José Sousa Barbosa</td>
+            </tr>
+            <tr>
+              <td>Carlos Misto Queste</td>
+            </tr>
+          </tbody>
+        </table>
+          </div>
+        </div>
+       </div>
+  </div>
+</div>
+
+
+{% endblock %}

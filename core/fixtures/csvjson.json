@@ -1,0 +1,46 @@
+[
+  {
+    "model": "core.Curso",
+    "pk": 1,
+    "fields": {
+        "codigo_area": 1,
+        "nome_area": "Educação",
+        "codigo_instituicao": "142A01",
+        "nome_formacao": "Processos Escolares - Tecnológico",
+        "grau_academico": "Tecnológico"
+    }
+  },
+  {
+    "model": "core.Curso",
+    "pk": 2,
+    "fields": {
+        "codigo_area": 1,
+        "nome_area": "Educação",
+        "codigo_instituicao": "142A01",
+        "nome_formacao": "Redes de Computadores",
+        "grau_academico": "Tecnológico"
+    }
+  },
+   {
+    "model": "core.Curso",
+    "pk": 3,
+    "fields": {
+        "codigo_area": 1,
+        "nome_area": "Educação",
+        "codigo_instituicao": "142A01",
+        "nome_formacao": "Sistemas para internet",
+        "grau_academico": "Tecnológico"
+    }
+  },
+  {
+    "model": "core.Curso",
+    "pk": 4,
+    "fields": {
+        "codigo_area": 1,
+        "nome_area": "Educação",
+        "codigo_instituicao": "142A01",
+        "nome_formacao": "Analise e desenvolvimento de sistemas",
+        "grau_academico": "Tecnológico"
+    }
+  }
+]

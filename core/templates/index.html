@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+<table class="table table-bordered" style="background-color: #F7F7F7; border: solid #dee2e6 1px; height: 942px; left: 285px; right: 33px;
+top: 128px;">
+  <thead>
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">Email</th>
+      <th scope="col">Telefone</th>
+      <th scope="col">Situação</th>
+      <th scope="col">#</th>
+      <th scope="col">Informações</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for curso in cursos %}
+    <tr>
+      <td>{{ curso.nome }}</td>
+      <td>Otto</td>
+      <td>{{ curso.turno }}</td>
+
+      {% if curso.status == True %}
+      <td style="color: #009933">Ativo</td>
+      {% endif %}
+      {% if curso.status == false %}
+      <td style="color: #009933">Inativo</td>
+      {% endif %}
+      <td>Link</td>
+    </tr>
+  </tbody>
+  {% endfor %}
+</table>
+      <div class="pagination">
+          <span class="step-links">
+              {% if cursos.has_previous %}
+                  <a href="?page={{ cursos.previous_page_number }}"><i class="fas fa-arrow-left"></i></a>
+              {% endif %}
+
+              {% if cursos.paginator.num_pages %}
+              <span class="current">
+                  {{ cursos.number }} de {{ cursos.paginator.num_pages }}
+              </span>
+              {% endif %}
+
+              {% if cursos.has_next %}
+                  <a href="?page={{ cursos.next_page_number }}"><i class="fas fa-arrow-right"></i></a>
+              {% endif %}
+          </span>
+      </div>
+{% endblock%}
