@@ -1,7 +1,6 @@
 *.pyc
 .idea/
-venv/
+/venv
 .env
-../venv/
 *.sqlite3
-media/media
+/media
