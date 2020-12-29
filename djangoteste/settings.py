@@ -82,7 +82,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'syslivro',
-        'USER': 'postgres',
+        'USER': 'prodap',
         'PASSWORD': 'sysprodap',
         'HOST': 'localhost',
         'PORT': '5432',

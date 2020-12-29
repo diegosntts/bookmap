@@ -4,7 +4,6 @@ from rest_framework.response import Response
 from core.models import Curso
 from core.api.serializers.cadastro_livro_serializer import CursoSerializer
 
-
 class CursosViewSet(viewsets.ViewSet):
     def list(self, request):
         queryset = Curso.objects.all()

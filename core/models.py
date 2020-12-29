@@ -1,6 +1,12 @@
 from django.db import models
 from django.conf import settings
 
+class Local(models.Model):
+    nome = models.CharField(max_length=100, null=True, blank=True, verbose_name='Nome')
+    latitude = models.IntegerField(null=True, verbose_name='Latitude')
+    longitude = models.IntegerField(null=True, verbose_name='Longitude')
+    endereco = models.CharField(max_length=100, verbose_name='Endereco')
+    urlmapa = models.CharField(max_length=100, verbose_name='Urlmapa')
 
 class Curso(models.Model):
     titulo = models.CharField(
@@ -19,6 +25,7 @@ class Curso(models.Model):
         upload_to='media', null=True, verbose_name='Documento')
     status = models.BooleanField(default=False, verbose_name='status')
 
+    local = models.ForeignKey(Local, null=True, on_delete=models.CASCADE)
     def __str__(self):
         return self.titulo
 
